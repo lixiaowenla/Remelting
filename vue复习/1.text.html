@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="value">
+        <button @click="add()">增加</button>
+        <ul>
+            <li v-for="(item,index) in arr">{{item}} <button @click="del">删除</button></li> 
+        </ul>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+    new Vue({
+            el:"#app",
+            data:{
+                arr:[],
+                value:""
+            },
+            methods:{
+                add(){
+                    this.arr.push(this.value);
+                    this.value='';
+                },
+                del(){
+                    this.arr.splice(index);
+                }
+            }
+
+    })
+    </script>
+</body>
+</html>
