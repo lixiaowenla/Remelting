@@ -7,11 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .color{
+            color:red;
+        }
+    </style>
     <div id="app">
         <input type="text" v-model="value">
         <button @click="add()">增加</button>
         <ul>
-            <li v-for="(item,index) in arr">{{item}} <button @click="del">删除</button></li> 
+            <li :class="[isshow?'color':'']" @click=change() v-for="(item,index) in arr" >{{item}} <button @click="del">删除</button></li> 
         </ul>
 
     </div>
@@ -21,16 +26,22 @@
             el:"#app",
             data:{
                 arr:[],
-                value:""
+                value:"",
+               isshow:true,
             },
             methods:{
                 add(){
                     this.arr.push(this.value);
                     this.value='';
                 },
-                del(){
-                    this.arr.splice(index);
+                del(index){
+                    console.log(index);
+                    this.arr.splice(index,1);
+                },
+                change(){
+                    this.isshow=!this.isshow;
                 }
+            
             }
 
     })
