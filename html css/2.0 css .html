@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+   <style>
+/* css三种引入方式  
+                内联样式（优先级最高） 
+                内部样式(写在style标签内)  
+                外部样式（通过link标签引入) 
+*/
+
+
+/* 选择器 
+        标签选择器  
+        id选择器  
+        类选择器   
+        子代选择器(ul>li)  
+        后代选择器（ul  li）
+        分组选择器 （#div,li)     
+        伪类选择器（a:hover ）      
+*/
+
+/* 
+背景
+background-color:red;
+background-image:url('');
+background-repeat:
+             repeat;默认
+             no-repeat;
+             repeat-x;
+             repeat-y;
+             inherit  规定应该从父元素background-repeat属性设置
+background-position：
+            图片位置:x  y
+            百分比 
+            bottom  center top left 
+
+*/
+
+/* 文本 
+text-index：100px;     文本缩进
+text-align:center,right,left(默认)    文本对齐
+text-space   单词之间距离(正数：增加之间距离 ，负数：减少之间距离)
+letter-spacing  字母之间间隔
+text-decoration:none,underline,overline,lin-through  文本修饰（一般用于a标签）
+
+
+单行文本垂直居中，使行高等于容器的高度   line-height：100px;
+
+容器溢出
+        overflow:hidden
+        overflow-y:scroll;  //设置滚动，想要哪个方向就设置什么
+单行文本溢出隐藏，溢出部分展示...
+            1.给容器设置宽高
+            2.text-overflow:ellipsis;  //文本溢出展示为... 
+            3.white-space:nowrap;  //把文本强制为一行展示
+            4.overflow:hidden;
+*/
+
+
+/*字体
+字体系列：font-family
+字体大小（pc端默认字体大小是16px,最小12px）：font-size 
+font-weight：
+         字体粗细 100~900
+         默认展示400  
+         blod  正常加粗700 
+         bloder  相对于父元素更加粗
+font-style:(字体风格)
+        normal
+        italic  斜体
+        oblique  倾斜   
+        斜体和倾斜在pc端看着是一样的
+ */
+
+ /*
+链接
+四种状态：必须按顺序写
+        a:link {color：red}   默认样式 
+        a:visited{color:green}  已访问过的样式
+        a:hover{color:pink}  鼠标划入样式
+        a:active{color:red}  点击时刻样式
+*/
+
+/* 
+列表
+list-style：
+        none
+        circle  空心圆
+list-style-image:url("")   加上图片
+list-style-position:
+                    inside
+                    outside   默认
+
+ */
+
+
+/* 
+盒模型
+面试可能要手动画出盒模型
+margin:上 右  下 左
+padding：上 右  下 左
+border：0.05px  solid(dotted,dashed,double)  blue   
+一般为了避免浏览器自带的边距直接设置为0
+*{
+    margin:0;
+    padding:0
+}
+ */
+
+/* 
+外边距合并问题
+当两个 相邻元素 或者 嵌套元素 都设置外边距时，会选择较大的一个外边距
+
+嵌套类型的外边距合并解决办法：
+                    1.给父元素加上transparent边框   但是元素会增加宽高，故将元素本身设置减去边框的大小
+                    2.给父元素设置溢出隐藏    overflow：hidden
+                    3.给父元素或者子元素设置定位  position:absolute
+                    4.给父元素或者子元素设置浮动  float:left
+ */
+
+
+/* 
+position 定位
+            相对定位 relative 相对于元素本身定位    元素定位后空间不会释放
+            绝对定位 absolute 相对于最近的祖先元素进行定位  定位后空间释放
+            固定定位  fixed    相对于窗口浏览器定位     定位后空间释放
+            定位之后用z-index  设置层级   越大，层级越高，避免被覆盖   
+ */
+
+
+ /* 
+ 浮动 float 
+            左浮  left  123    按照HTML顺序从左向右依次排列
+            右浮  right 321  按照HTML顺序从右到左依次排列
+
+解决浮动塌陷问题
+                1.给父元素溢出隐藏   overflow：hidden;
+                2.新增一个空元素  清除浮动  #clear{clear:left,right,both}
+                3.伪元素     .clearflex{
+                                    content:'';
+                                    clear:both;
+                                    display:block;
+                                    }  
+                4.给父元素设置高度 
+  */
+
+
+
+/* 
+让块级元素和行级元素之间转换
+                display:
+                        block  块级元素，一个占一行，可以设置宽高
+                        inline  行级元素，多个占一行，不可以设置宽高
+                        inline-block  行级块元素： 多个元素占一行，可以设置宽高 ，比如image
+行级元素设置宽高：
+             1.display
+             2.float
+
+ */
+
+/* 
+对齐
+块级元素左右居中:
+                margin-left=margin-right=auto;    
+                margin:0 auto;
+ */
+</style>
+
+    
+   
+
+</html>
